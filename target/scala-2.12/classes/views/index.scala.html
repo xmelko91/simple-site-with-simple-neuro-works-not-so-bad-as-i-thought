@@ -1,0 +1,43 @@
+@()
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Neural Digit Recognition!</title>
+  <link rel="stylesheet" href= @routes.Assets.versioned("stylesheets/style.css")>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Да это же самый настоящий <strong>ИНТЕЛЕКТИЩЕ</strong></h1>
+  </header>
+  <article class="article article_whitebg article_first">
+    <h2 class="black"><br>Великий искусственный интелект победил!</h2>
+    <img class="brain" src= @routes.Assets.versioned("images/brain.jpg")>
+    <p class="black">Победа Искусственного интелекта не за горами,<br> так что учимся с ним дружить!</p>
+  </article>
+  <article class="article article_bluebg article_second">
+    <h2 class="white">Протестируем!</h2>
+    <p class="white"></p>
+    <form class="form">
+      <div id ="aaa">asdasd</div>>
+      <canvas height='280' width='280' id='example'
+              onmousedown="pressed()"
+              onmousemove="paint()"
+              onmouseup="noPressed()">Обновите браузер</canvas>
+      <script src= @routes.Assets.versioned("javascripts/holst.js")></script>
+       <button class="form_button" type="button" onclick= "clearP()">
+         Обновить
+      <script src=@routes.Assets.versioned("javascripts/clear.js")></script>
+       </button>
+    </form>
+  </article>
+</body>
+<script>
+  $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+</script>
+</html>
